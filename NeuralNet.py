@@ -1,15 +1,14 @@
 
 # coding: utf-8
 
-# # Annotations for the Sirajology Python NN Example
+# # Annotations 
 # 
-# This code comes from a demo NN program from the YouTube video https://youtu.be/h3l4qz76JhQ. The program creates an neural network that simulates the exclusive OR function with two inputs and one output. 
 # 
 # 
 
 # In[1]:
 
-import numpy as np  # Note: there is a typo on this line in the video
+import numpy as np  
 
 
 # The following is a function definition of the sigmoid function, which is the type of non-linearity chosen for this neural net. It is not the only type of non-linearity that can be chosen, but is has nice analytical features and is easy to teach with. In practice, large-scale deep learning systems use piecewise-linear functions because they are much less expensive to evaluate. 
@@ -18,11 +17,11 @@ import numpy as np  # Note: there is a typo on this line in the video
 
 # In[2]:
 
-def nonlin(x, deriv=False):  # Note: there is a typo on this line in the video
+def nonlin(x, deriv=False):  
     if(deriv==True):
         return (x*(1-x))
     
-    return 1/(1+np.exp(-x))  # Note: there is a typo on this line in the video
+    return 1/(1+np.exp(-x))  
 
 
 # The following code creates the input matrix. Although not mentioned in the video, the third column is for accommodating the bias term and is not part of the input. 
@@ -30,7 +29,7 @@ def nonlin(x, deriv=False):  # Note: there is a typo on this line in the video
 # In[3]:
 
 #input data
-X = np.array([[0,0,1],  # Note: there is a typo on this line in the video
+X = np.array([[0,0,1],  
             [0,1,1],
             [1,0,1],
             [1,1,1]])
